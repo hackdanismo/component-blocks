@@ -71,3 +71,20 @@ $ npm create vite@latest component-blocks -- --template react-ts
 ```
 
 This will setup: `Vite`, `React` and `TypeScript` out of the box.
+
+### TypeScript declaration files
+The `unplugin-dts` package generates `TypeScript` declaration files, the `.d.ts` files, for the component library. Those files describe the public `TypeScript` types of the library without containing the implementation.
+
+```shell
+$ npm install -D unplugin-dts
+```
+
+That declaration file is what allows someone consuming the library to get:
+
+- `autocomplete`
+- `prop type checking`
+- `IntelliSense`
+- `TypeScript errors when passing invalid props`
+- `type information without needing your original .tsx source`
+
+`Vite` itself builds the `JavaScript`, but it does not automatically generate all the declaration files usually wanted for a published `TypeScript` library. `unplugin-dts` handles that part.
