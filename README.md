@@ -110,3 +110,7 @@ To run `Storybook`:
 ```shell
 $ npm run storybook
 ```
+
+`Storybook` will be visible here: `http://localhost:6006/`.
+
+To remove the example components that `Storybook` adds following installation, remove the `src/stories` folder from the project.
