@@ -8,6 +8,11 @@ export function Button({
   className = '',
   children,
   variant = 'primary',
+  /*
+   * Without type, native button inside a form defaults to submit.
+   * This can cause accidental form submissions.
+   */
+  type = 'button',
   ...props
 }: ButtonProps) {
   const variantClasses = {
@@ -17,6 +22,7 @@ export function Button({
 
   return (
     <button
+      type={type}
       className={`cursor-pointer rounded-md px-4 py-2 ${variantClasses[variant]} ${className}`}
       {...props}
     >

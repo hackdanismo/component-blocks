@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react-vite'
+import { fn } from 'storybook/test'
 import { Button } from './Button'
 
 const meta = {
@@ -12,13 +13,14 @@ const meta = {
     docs: {
       description: {
         component:
-          'A reusable button component with primary and secondary variants.',
+          'A reusable button component with primary and secondary variants. It supports standard HTML button attributes, including type, disabled, and click handlers.',
       },
     },
   },
 
   args: {
     children: 'Button',
+    type: 'button',
   },
 
   argTypes: {
@@ -26,6 +28,22 @@ const meta = {
       control: 'select',
       options: ['primary', 'secondary'],
       description: 'Controls the visual style of the button.',
+    },
+
+    type: {
+      control: 'select',
+      options: ['button', 'submit', 'reset'],
+      description: 'Controls the native HTML button type.',
+    },
+
+    disabled: {
+      control: 'boolean',
+      description: 'Disables the button when enabled.',
+    },
+
+    children: {
+      control: 'text',
+      description: 'The content displayed inside the button.',
     },
   },
 } satisfies Meta<typeof Button>
@@ -51,5 +69,29 @@ export const Disabled: Story = {
     variant: 'primary',
     children: 'Disabled Button',
     disabled: true,
+  },
+}
+
+export const Submit: Story = {
+  args: {
+    variant: 'primary',
+    children: 'Submit',
+    type: 'submit',
+  },
+}
+
+export const Reset: Story = {
+  args: {
+    variant: 'secondary',
+    children: 'Reset',
+    type: 'reset',
+  },
+}
+
+export const WithClickHandler: Story = {
+  args: {
+    variant: 'primary',
+    children: 'Click me',
+    onClick: fn(),
   },
 }
