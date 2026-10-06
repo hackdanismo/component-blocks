@@ -72,6 +72,13 @@ $ npm create vite@latest component-blocks -- --template react-ts
 
 This will setup: `Vite`, `React` and `TypeScript` out of the box.
 
+### Public
+Anything in the `public/` folder will be passed to the `dist/` folder when the `build` command is run:
+
+```shell
+$ npm run build
+```
+
 ### TypeScript declaration files
 The `unplugin-dts` package generates `TypeScript` declaration files, the `.d.ts` files, for the component library. Those files describe the public `TypeScript` types of the library without containing the implementation.
 
