@@ -13,7 +13,7 @@ const meta = {
     docs: {
       description: {
         component:
-          'A reusable button component with primary and secondary variants. It supports standard HTML button attributes, including type, disabled, and click handlers.',
+          'A reusable button component with primary and secondary variants. It supports standard HTML button attributes, including type, disabled, and click handlers. Set unstyled to true to remove the built-in Tailwind styling.',
       },
     },
   },
@@ -21,6 +21,7 @@ const meta = {
   args: {
     children: 'Button',
     type: 'button',
+    unstyled: false,
   },
 
   argTypes: {
@@ -28,6 +29,11 @@ const meta = {
       control: 'select',
       options: ['primary', 'secondary'],
       description: 'Controls the visual style of the button.',
+    },
+
+    unstyled: {
+      control: 'boolean',
+      description: 'Removes the built-in Tailwind styling when enabled.',
     },
 
     type: {
@@ -61,6 +67,22 @@ export const Primary: Story = {
 export const Secondary: Story = {
   args: {
     variant: 'secondary',
+  },
+}
+
+export const Unstyled: Story = {
+  args: {
+    children: 'Unstyled Button',
+    unstyled: true,
+  },
+}
+
+export const UnstyledWithCustomClasses: Story = {
+  args: {
+    children: 'Custom Button',
+    unstyled: true,
+    className:
+      'border border-purple-600 px-4 py-2 text-purple-600 hover:bg-purple-50',
   },
 }
 
