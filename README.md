@@ -13,6 +13,13 @@ $ npm run dev
 
 The application will run here: `http://localhost:5173/`
 
+Run `Storybook`:
+
+```shell
+$ cd component-blocks
+$ npm run storybook
+```
+
 ## Development
 
 ### Clone the Repository
