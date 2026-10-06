@@ -1,3 +1,9 @@
+/*
+ * Import the CSS stylesheet including Tailwind CSS.
+ * Allows components and Storybook to use Tailwind CSS.
+ */
+import '../src/styles.css'
+
 import type { Preview } from '@storybook/react-vite'
 
 const preview: Preview = {
