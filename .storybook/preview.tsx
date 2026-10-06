@@ -14,6 +14,20 @@ const preview: Preview = {
       toc: true,
     },
 
+    backgrounds: {
+      default: 'dark',
+      values: [
+        {
+          name: 'dark',
+          value: '#111827',
+        },
+        {
+          name: 'light',
+          value: '#ffffff',
+        },
+      ],
+    },
+
     controls: {
       matchers: {
         color: /(background|color)$/i,
