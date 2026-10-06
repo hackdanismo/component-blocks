@@ -1,6 +1,18 @@
 # Component Blocks
 An open source component library for `React`, written in `TypeScript` and released under the `MIT licence`.
 
+## Run the application
+Once the repository has been cloned and the packages and dependencies have been installed, use the following commands to run the application locally:
+
+```shell
+$ cd component-blocks
+$ nvm install
+$ nvm use
+$ npm run dev
+```
+
+The application will run here: `http://localhost:5173/`
+
 ## Development
 
 ### Clone the Repository
@@ -38,3 +50,24 @@ $ wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.8/install.sh | ba
 ```
 
 [https://github.com/nvm-sh/nvm](https://github.com/nvm-sh/nvm).
+
+Once completed, install the packages and dependencies listed in the `package.json` file. This will generate the `node_modules` folder:
+
+```shell
+$ npm install
+```
+
+Run run project, then open: `http://localhost:5173/`:
+
+```shell
+$ npm run dev
+```
+
+### Setup Vite
+To setup `Vite` as our build tool alongside `TypeScript`, use:
+
+```shell
+$ npm create vite@latest component-blocks -- --template react-ts
+```
+
+This will setup: `Vite`, `React` and `TypeScript` out of the box.
