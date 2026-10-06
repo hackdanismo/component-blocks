@@ -1,11 +1,37 @@
+/*
+ * Import the CSS stylesheet including Tailwind CSS.
+ * Allows components and Storybook to use Tailwind CSS.
+ */
+import '../src/styles.css'
+
 import type { Preview } from '@storybook/react-vite'
 
 const preview: Preview = {
+  tags: ['autodocs'],
+
   parameters: {
+    docs: {
+      toc: true,
+    },
+
+    backgrounds: {
+      default: 'dark',
+      values: [
+        {
+          name: 'dark',
+          value: '#111827',
+        },
+        {
+          name: 'light',
+          value: '#ffffff',
+        },
+      ],
+    },
+
     controls: {
       matchers: {
-       color: /(background|color)$/i,
-       date: /Date$/i,
+        color: /(background|color)$/i,
+        date: /Date$/i,
       },
     },
 
@@ -13,9 +39,9 @@ const preview: Preview = {
       // 'todo' - show a11y violations in the test UI only
       // 'error' - fail CI on a11y violations
       // 'off' - skip a11y checks entirely
-      test: 'todo'
-    }
+      test: 'todo',
+    },
   },
-};
+}
 
-export default preview;
+export default preview

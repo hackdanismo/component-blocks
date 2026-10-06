@@ -1,1 +1,8 @@
+/*
+ * Import the CSS stylesheet including Tailwind CSS.
+ * Allows components to use Tailwind CSS.
+ */
+import './styles.css'
+
+// Import Components
 export { Button } from './components/Button/Button'
