@@ -129,6 +129,8 @@ To install `Tailwind` inside of a `Vite` project:
 $ npm install -D tailwindcss @tailwindcss/vite
 ```
 
+Update the `vite.config.ts` file to include `Tailwind CSS`.
+
 Once installed, setup a `src/styles.css` CSS stylesheet. Add the `Tailwind CSS` import:
 
 ```css
