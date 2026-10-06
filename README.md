@@ -13,6 +13,13 @@ $ npm run dev
 
 The application will run here: `http://localhost:5173/`
 
+Run `Storybook`:
+
+```shell
+$ cd component-blocks
+$ npm run storybook
+```
+
 ## Development
 
 ### Clone the Repository
@@ -95,3 +102,22 @@ That declaration file is what allows someone consuming the library to get:
 - `type information without needing your original .tsx source`
 
 `Vite` itself builds the `JavaScript`, but it does not automatically generate all the declaration files usually wanted for a published `TypeScript` library. `unplugin-dts` handles that part.
+
+### Storybook
+To install `Storybook` inside of the component library and allow components to be rendered outside of an application, run the following command:
+
+```shell
+$ npm create storybook@latest
+```
+
+This will generate the `.storybook/` folder in the root of the project. 
+
+To run `Storybook`:
+
+```shell
+$ npm run storybook
+```
+
+`Storybook` will be visible here: `http://localhost:6006/`.
+
+To remove the example components that `Storybook` adds following installation, remove the `src/stories` folder from the project.
