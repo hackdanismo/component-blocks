@@ -128,3 +128,23 @@ To install `Tailwind` inside of a `Vite` project:
 ```shell
 $ npm install -D tailwindcss @tailwindcss/vite
 ```
+
+Once installed, setup a `src/styles.css` CSS stylesheet. Add the `Tailwind CSS` import:
+
+```css
+@import "tailwindcss";
+```
+
+Then, import the stylsheet into the `src/index.ts` file:
+
+```typescript
+import './styles.css'
+```
+
+The components in the library can now use `Tailwind CSS`.
+
+Within the `.storybook/preview.ts` import the stylesheet to allow stories in `Storybook` to render `Tailwind CSS` classes:
+
+```typescript
+import '../src/styles.css'
+```
