@@ -5,6 +5,7 @@
 import './styles.css'
 
 // Import Components
+export { Accordion } from './components/Accordion/Accordion'
 export { Button } from './components/Button/Button'
 export { Card } from './components/Card/Card'
 export { CardContainer } from './components/CardContainer/CardContainer'
