@@ -6,6 +6,7 @@ import './styles.css'
 
 // Import Components
 export { Button } from './components/Button/Button'
+export { Card } from './components/Card/Card'
 export { Checkbox } from './components/Checkbox/Checkbox'
 export { Heading } from './components/Heading/Heading'
 export { Input } from './components/Input/Input'
